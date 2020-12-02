@@ -50,7 +50,12 @@ rm(features)
 activity = read.table(paste0(workspace,"/y_complete.txt"))
 using[,dim(using)[2]+1] = activity
 names(using)[dim(using)[2]] = "activity"
+subject = read.table(paste0(workspace,"/subject_complete.txt"))
+using[,dim(using)[2]+1] = subject
+names(using)[dim(using)[2]] = "subject"
 activity = read.table("./UCI HAR Dataset/activity_labels.txt")
 activity = activity[,2]
 using$activity = factor(using$activity,1:6,activity)
-rm(activity)
+rm(activity,subject)
+
+
