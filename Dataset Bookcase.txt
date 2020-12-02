@@ -1,0 +1,5 @@
+1.	The method used to make the complete dataset was to
+	append the data from test files on the train files. 
+	The order of the data was not altered in any way, so
+	this was the only step needed for the creation of the
+	complete dataset.
