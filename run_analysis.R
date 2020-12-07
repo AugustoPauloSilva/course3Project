@@ -1,3 +1,4 @@
+library(dplyr)
 workspace = "./UCI HAR Dataset/complete"
 
 # Writing complete dataset, with train and test data
@@ -58,4 +59,6 @@ activity = activity[,2]
 using$activity = factor(using$activity,1:6,activity)
 rm(activity,subject)
 
-
+result = tbl_df(using)
+result = group_by(result,activity,subject)
+result = summarize_all(result,mean,na.rm = TRUE)
