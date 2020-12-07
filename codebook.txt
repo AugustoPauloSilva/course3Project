@@ -1,0 +1,6 @@
+result: 	The final dataset, constructed at the end of the code
+using:		Tidy version of the original dataset
+workspace:	Path to the used files on the dataset
+features:	Required variables from the original 561 vector of the dataset
+activity:	The values and labels of the activity of a sample
+subject:	Identifies the subject responsible by a activity
